@@ -1,0 +1,330 @@
+package employeesalary;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+import javax.swing.*;
+
+public class SalaryFrame extends JFrame{
+	
+
+		
+		ImageIcon icon = new ImageIcon("house.png");
+		ImageIcon Bgicon = new ImageIcon(new ImageIcon("background.jpg").getImage().getScaledInstance(1000, 600, Image.SCALE_SMOOTH));
+	
+		private static final Color Color = null;
+		JTextField txt1 = new JTextField();
+		JTextField txt2 = new JTextField();
+		JTextField txt3 = new JTextField();
+		JTextField txt4 = new JTextField();
+		JTextField txt5 = new JTextField();
+		JTextField txt6 = new JTextField();
+		JTextField txt7 = new JTextField();
+		JTextField txt8 = new JTextField();
+		
+		
+		JTextField txtb1 = new JTextField();
+		JTextField txtb2 = new JTextField();
+		JTextField txtb3 = new JTextField();
+		JTextField txtb4 = new JTextField();
+		JTextField txtb5 = new JTextField();
+		JTextField txtb6 = new JTextField();
+		JTextField txtb7 = new JTextField();
+		JTextField txtb8 = new JTextField();
+		
+		
+		JTextField txt17 = new JTextField();
+		JTextField txt18 = new JTextField();
+		JTextField txt19 = new JTextField();
+		JTextField txt20 = new JTextField();
+		JTextField txt21 = new JTextField();
+		JTextField txt22 = new JTextField();
+		JTextField txt23 = new JTextField();
+		
+		JLabel lbltxtNum1 = new JLabel();
+		JLabel lbltxtNum2= new JLabel();
+		JLabel lbltxtNum3 = new JLabel();
+		JLabel lbltxtNum4 = new JLabel();
+		JLabel lbltxtNum5 = new JLabel();
+		JLabel lbltxtNum6 = new JLabel();
+		JLabel lbltxtNum7 = new JLabel();
+		JLabel lbltxtNum8 = new JLabel();
+		JLabel lbltxtNum9 = new JLabel();
+		JLabel lbltxtNum10 = new JLabel();
+		JLabel lbltxtNum11 = new JLabel();
+		JLabel lbltxtNum12 = new JLabel();
+		JLabel lbltxtNum13 = new JLabel();
+		JLabel lbltxtNum14 = new JLabel();
+		JLabel lbltxtNum15 = new JLabel();
+		JLabel lbltxtNum16 = new JLabel();
+		JLabel lbltxtNum17 = new JLabel();
+		JLabel lbltxtNum18 = new JLabel();
+		JLabel lbltxtNum19 = new JLabel();
+		JLabel lbltxtNum20 = new JLabel();
+		JLabel lbltxtNum21 = new JLabel();
+		JLabel lbltxtNum22 = new JLabel();
+		JLabel lbltxtNum23 = new JLabel();
+		
+		
+		JPanel panel = new JPanel();
+		
+		JButton add =new JButton();
+		 
+		
+		SalaryFrame(){
+			
+			this.setSize(800, 600);
+			this.setLocationRelativeTo(null);
+			this.setTitle("Java Swing");
+			this.setResizable(false);
+			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+			this.getContentPane().setBackground(Color.decode("#34b7eb"));
+			this.setIconImage(icon.getImage());
+			this.setContentPane(new JLabel(Bgicon));
+			
+			txt1.setBounds(150, 50, 150, 30);
+			txt2.setBounds(100, 90, 150, 30);
+			txt3.setBounds(550, 50, 150, 30);
+			txt4.setBounds(450, 90, 150, 30);
+			txt5.setBounds(180, 130, 100, 30);
+			txt6.setBounds(500, 130, 80, 30);
+			txt7.setBounds(150, 170, 100, 30);
+			txt8.setBounds(430, 170, 100, 30);
+			
+			
+			lbltxtNum1.setBounds(30, 50, 150, 30);
+			lbltxtNum1.setText("Employee Name");
+			lbltxtNum1.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum2.setBounds(50, 90, 150, 30);
+			lbltxtNum2.setText("Job");
+			lbltxtNum2.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum3.setBounds(400, 50, 150, 30);
+			lbltxtNum3.setText("Employee ID no.");
+			lbltxtNum3.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum4.setBounds(370, 90, 150, 30);
+			lbltxtNum4.setText("Position");
+			lbltxtNum4.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum1.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum5.setBounds(30, 130, 150, 30);
+			lbltxtNum5.setText("Hour/s Accumulated");
+			lbltxtNum5.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum2.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum6.setBounds(400, 130, 150, 30);
+			lbltxtNum6.setText("Rate per hour");
+			lbltxtNum6.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum3.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum7.setBounds(20, 170, 150, 30);
+			lbltxtNum7.setText("Overtime hour/s ");
+			lbltxtNum7.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum8.setBounds(350, 170, 150, 30);
+			lbltxtNum8.setText("OT Rate");
+			lbltxtNum8.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			
+			lbltxtNum9.setBounds(30, 290, 150, 30);
+			lbltxtNum9.setText("Employee Name:");
+			
+			txtb1.setBounds(180,290,150,30);
+			txtb2.setBounds(180,320,150,30);
+			txtb3.setBounds(180,350,150,30);
+			txtb4.setBounds(180,380,150,30);
+			txtb5.setBounds(180,410,150,30);
+			txtb6.setBounds(180,440,150,30);
+			txtb7.setBounds(180,470,150,30);
+			txtb8.setBounds(180,500,150,30);
+
+			txt17.setBounds(540,280,150,30);
+			txt18.setBounds(540,320,150,30);
+			txt19.setBounds(540,360,150,30);
+			txt20.setBounds(540,400,150,30);
+			txt21.setBounds(540,480,150,30);
+			txt22.setBounds(540,440,150,30);
+		
+			lbltxtNum9.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum10.setBounds(30, 320, 150, 30);
+			lbltxtNum10.setText("Job:");
+			lbltxtNum10.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum11.setBounds(30, 350, 150, 30);
+			lbltxtNum11.setText("Employee ID no. :");
+			lbltxtNum11.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum12.setBounds(30, 380, 150, 30);
+			lbltxtNum12.setText("Position:");
+			lbltxtNum12.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum1.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum13.setBounds(30, 410, 150, 30);
+			lbltxtNum13.setText("Hour/s Accumulated:");
+			lbltxtNum13.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum2.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum14.setBounds(30, 440, 150, 30);
+			lbltxtNum14.setText("Rate per hour:");
+			lbltxtNum14.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			//lbltxtNum3.setBorder(BorderFactory.createLineBorder(Color.red));
+			lbltxtNum15.setBounds(30, 470, 150, 30);
+			lbltxtNum15.setText("Overtime hour/s: ");
+			lbltxtNum15.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum16.setBounds(30, 500, 150, 30);
+			lbltxtNum16.setText("OT Rate:");
+			lbltxtNum16.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			
+			lbltxtNum17.setBounds(370, 280, 150, 30);
+			lbltxtNum17.setText("Gross Salary:");
+			lbltxtNum17.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum18.setBounds(370, 320, 150, 30);
+			lbltxtNum18.setText("SSS Comtribution:");
+			lbltxtNum18.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum19.setBounds(370, 360, 150, 30);
+			lbltxtNum19.setText("Pag-ibig Contribution:");
+			lbltxtNum19.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum20.setBounds(370, 400, 250, 30);
+			lbltxtNum20.setText("Phil-Health Contribution:");
+			lbltxtNum20.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum21.setBounds(370, 440, 150, 30);
+			lbltxtNum21.setText("Income Tax:");
+			lbltxtNum21.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum22.setBounds(370, 480, 150, 30);
+			lbltxtNum22.setText("Net Pay:");
+			lbltxtNum22.setFont(new Font("Times New Roman", Font.BOLD, 15));
+			lbltxtNum23.setBounds(25, 260, 150, 30);
+			lbltxtNum23.setText(" Name");
+			lbltxtNum23.setFont(new Font("Times New Roman", Font.BOLD, 20));
+			
+			
+			
+			
+			add.setBounds(650, 180, 100, 50);
+			add.setText("Calculator");
+			add.setFocusable(false);
+			add.addActionListener (new ActionListener() {
+				
+	
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					String name = txt1.getText();
+					txtb1.setText(name);
+
+					String high = txt2.getText();
+					txtb2.setText(high);
+					
+
+					String hello = txt3.getText();
+					txtb3.setText(hello);
+					
+
+					String hope = txt4.getText();
+					txtb4.setText(hope);
+					
+
+					String heart = txt5.getText();
+					txtb5.setText(heart);
+
+					String nice = txt6.getText();
+					txtb6.setText(nice);
+					
+
+					String tina = txt7.getText();
+					txtb7.setText(tina);
+
+					String love = txt1.getText();
+					txtb8.setText(love);
+					
+					
+					
+					
+				}});
+			
+		
+			this.add(lbltxtNum1);
+			this.add(lbltxtNum2);
+			this.add(lbltxtNum3);
+			this.add(lbltxtNum4);
+			this.add(lbltxtNum5);
+			this.add(lbltxtNum6);
+			this.add(lbltxtNum7);
+			this.add(lbltxtNum8);
+			this.add(lbltxtNum9);
+			this.add(lbltxtNum10);
+			this.add(lbltxtNum11);
+			this.add(lbltxtNum12);
+			this.add(lbltxtNum13);
+			this.add(lbltxtNum14);
+			this.add(lbltxtNum15);
+			this.add(lbltxtNum16);
+			this.add(lbltxtNum17);
+			this.add(lbltxtNum18);
+			this.add(lbltxtNum19);
+			this.add(lbltxtNum20);
+			this.add(lbltxtNum21);
+			this.add(lbltxtNum22);
+			this.add(lbltxtNum23);
+			
+			this.add(txt1);
+			this.add(txt2);
+			this.add(txt3);
+			this.add(txt4);
+			this.add(txt5);
+			this.add(txt6);
+			this.add(txt7);
+			this.add(txt8);
+			this.add(txtb1);
+			this.add(txtb2);
+			this.add(txtb3);
+			this.add(txtb4);
+			this.add(txtb5);
+			this.add(txtb6);
+			this.add(txtb7);
+			this.add(txtb8);
+			
+			this.add(txt17);
+			this.add(txt18);
+			this.add(txt19);
+			this.add(txt20);
+			this.add(txt21);
+			this.add(txt22);
+			this.add(txt23);
+
+			
+			
+			this.add(panel);
+			
+			panel.setBounds(10,250,765,300);
+			panel.setBackground(Color.white);
+			/*
+			panel.add(lbltxtNum1);
+			panel.add(lbltxtNum2);
+			panel.add(lbltxtNum3);
+			panel.add(lbltxtNum4);
+			panel.add(lbltxtNum5);
+			panel.add(lbltxtNum6);
+			panel.add(lbltxtNum7);
+			panel.add(lbltxtNum8);
+			panel.add(lbltxtNum9);
+			panel.add(lbltxtNum10);
+			panel.add(txt1);
+			panel.add(txt2);
+			panel.add(txt3);
+			panel.add(txt4);
+			panel.add(txt5);
+			panel.add(txt6);
+			panel.add(txt7);
+			panel.add(txt8);
+			panel.add(txt9);
+			panel.add(txt10);
+			//panel.add
+			*/
+			
+			this.add(add);
+			
+			this.setLayout(null);
+			this.setVisible(true);
+			this.getContentPane().setBackground(Color.decode("#34b7eb"));
+			
+		}
+
+
+}
+		
